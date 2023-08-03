@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+main {
+  width: 30vw;
+  background-color: var(--veryDarkBlue);
+}
+
+.rating {
+  @apply flex justify-center items-center p-3 md:w-11 md:h-11 w-9 h-9  rounded-full bg-[color:var(--darkBlue)] align-middle text-[color:var(--mediumGrey)];
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+}
+
+p {
+  color: var(--mediumGrey);
+  font-size: 14px;
+}
+
+button {
+  font-size: 14.5px;
+  letter-spacing: 1.25px;
+  font-weight: 400;
+}
+
+@media screen and (max-width:480px) {
+  main {
+    width: 75vw;
+    background-color: var(--veryDarkBlue);
+  }
+}
